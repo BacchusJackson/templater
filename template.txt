@@ -1,0 +1,10 @@
+Hello FIRST_NAME LAST_NAME,
+
+We're writing you to say Happy Birthday!
+
+Congratulations on turning AGE,
+
+
+Sincerely,
+
+batCAVE Team
