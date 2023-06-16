@@ -5,12 +5,13 @@ GOCLEAN = $(GOCMD) clean
 GORELEASERCMD = goreleaser
 
 # Output binary name
-BINARY_NAME = codepack
+BINARY_NAME = templater
 
 # Targets
 build:
 	mkdir -p bin
 	$(GOBUILD) -o bin/$(BINARY_NAME) -v ./...
+	cp ./sample/* bin/
 
 clean:
 	$(GOCLEAN)

@@ -53,6 +53,12 @@ func configValues(r io.Reader) map[string]string {
 	output := make(map[string]string)
 
 	for scanner.Scan() {
+		if len(scanner.Text()) > 2 {
+			// ignore comments
+			if scanner.Text()[:2] == "//" {
+				continue
+			}
+		}
 		parts := strings.Split(scanner.Text(), "=")
 		if len(parts) != 2 {
 			panic("format must be KEY=VALUE")
